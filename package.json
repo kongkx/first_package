@@ -1,0 +1,21 @@
+{
+  "name": "@kucial/first_package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/first_package.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c"
+  },
+  "files": [
+    "*.md",
+    "dist"
+  ],
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "rollup": "^2.17.1",
+    "rollup-plugin-terser": "^6.1.0"
+  }
+}
