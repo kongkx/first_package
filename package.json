@@ -5,7 +5,14 @@
   "main": "dist/first_package.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup -c"
+    "deploy-storybook": "storybook-to-ghpages",
+    "build": "rollup -c",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kongkx/first_package.git"
   },
   "files": [
     "*.md",
@@ -15,7 +22,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/react": "^5.3.19",
+    "@storybook/storybook-deployer": "^2.8.6",
+    "babel-loader": "^8.1.0",
     "rollup": "^2.17.1",
     "rollup-plugin-terser": "^6.1.0"
-  }
+  },
+  "dependencies": {}
 }
