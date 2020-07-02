@@ -32,16 +32,3 @@ jobs:
       - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.npm_token}}
-
-  publish-gihub-pages:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 12
-          registry-url: https://registry.npmjs.org/
-      - run: npm ci
-      - run: npm run deploy-storybook -- --ci --host-token-env-variable=GITHUB_TOKEN
-        env:
-          GITHUB_TOKEN: ${{ secrets.github_token }}
